@@ -1,1 +1,31 @@
+#include <stdio.h>
 
+int main() {
+    int num, count = 0;
+
+    // Ask the user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Handle the case when the number is 0
+    if (num == 0) {
+        count = 1;
+    } else {
+        // Convert negative number to positive
+        if (num < 0) {
+            num = -num;
+        }
+
+        // Count digits by repeatedly dividing by 10
+        while (num != 0) {
+            num = num / 10;
+            count++;
+        }
+    }
+
+    // Display the number of digits
+    printf("Number of digits = %d\n", count);
+
+    // Indicate successful program execution
+    return 0;
+}
