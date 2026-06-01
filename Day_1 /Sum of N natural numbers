@@ -4,7 +4,7 @@ int main()
 int sum=0,n,i;
  //entering the number upto which sum has to be print
 printf("enter the value of 'n':");
-scanf("%d",n);
+scanf("%d",&n);
 //running the loop till 'n' to calculate the sum
 for(i=1;i<=n;i++)  
 {
