@@ -1,1 +1,20 @@
 
+#include <stdio.h>
+
+int main() {
+    int num, i;
+
+    // Ask the user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Display a heading for the multiplication table
+    printf("\nMultiplication Table of %d:\n", num);
+
+    // running loop from 1 to 10 to generate the table
+    for (i = 1; i <= 10; i++) {
+        // Print the current multiplication result
+        printf("%d x %d = %d\n", num, i, num * i)
+}
+    return 0;
+}
