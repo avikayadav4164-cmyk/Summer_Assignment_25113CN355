@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int , n ;
+    int result = 1;
+    printf(" Enter the number 'x' and its power 'n'");
+    scanf("%d ,&x);
+    scanf("%d",&n);
+
+    for (int i = 0; i < n; i++) {
+        result *= x;
+    }
+
+    printf("%d", result);
+
+    return 0;
+}
