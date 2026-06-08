@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int i,j,h=5;
+    char c='A';
+  printf("enter the height of the half pyramid");
+  scanf("%d",&h);
+  for(i=1;i<=h;i++)
+  {
+  for(j=1;j<=i;j++)
+  {
+      printf("%c \t",c);
+      c++;
+  }
+  c='A';
+  printf("\n");
+}    return 0;
+}
