@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int i,j,h;
+  printf("enter the height of the pattern");
+  scanf("%d",&h);
+  for(i=1;i<=h;i++)
+  {
+  for(j=h;j>=i;j--)
+  {
+      printf("* \t");
+  }
+  printf("\n");
+}    return 0;
+}
