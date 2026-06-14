@@ -1,1 +1,30 @@
+#include <stdio.h>
 
+int main()
+{
+    int i,n,n1,c=0;
+    int arr[20];
+     printf("Enter a number of elements: ");
+    scanf("%d", &n);
+
+//entering the  array elements
+
+   for(i=0;i<n;i++)
+{
+   printf("enter element arr[%d]",i);
+  scanf("%d",arr[i]);
+}
+
+printf("Enter the element to find its frequency: ");
+    scanf("%d", &n1);
+
+//frequency of an array element
+
+    for(i=0;i<n;i++)
+{
+if(n1==arr[i])
+c++;
+}
+printf("frequency is %d",c);
+    return 0;
+}
