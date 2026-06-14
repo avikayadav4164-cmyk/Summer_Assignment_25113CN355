@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n;
+    int arr[20];
+   int ceven=0,codd=0;
+     printf("Enter a number of elements: ");
+    scanf("%d", &n);
+
+//entering the  array elements
+
+   for(i=0;i<n;i++)
+{
+   printf("enter element arr[%d]",i);
+  scanf("%d",arr[i]);
+}
+
+//counting even and odd array elements
+
+    for(i=0;i<n;i++)
+{
+ if(arr[i]%2==0)
+  ceven++;
+  else 
+  codd++;
+}
+printf("number of even elements %d",ceven);
+printf("number of odd numbers is %d",codd);
+    return 0;
+}
