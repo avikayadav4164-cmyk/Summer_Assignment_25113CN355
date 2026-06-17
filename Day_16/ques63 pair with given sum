@@ -2,25 +2,34 @@
 
 int main()
 {
-    int i,n;
+    int i,n,sum1,sum=0,j;
     int arr[20];
      printf("Enter a number of elements: ");
     scanf("%d", &n);
+     printf("enter the target sum");
+    scanf("%d",&sum1);
 
 //entering the  array elements
 
    for(i=0;i<n;i++)
 {
    printf("enter element arr[%d]",i);
-  scanf("%d",arr[i]);
+  scanf("%d",&arr[i]);
 }
 
-//displaying the array elements
-
-printf("the array is;");
-    for(i=0;i<n;i++)
+for(i=0;i<n;i++)
 {
-printf("%d",arr[i]);
+for(j=0;j<n;j++)
+{
+if(j!=i)
+{
+sum=arr[i]+arr[j];
 }
+if(sum==sum1)
+printf("the pair is %d %d",arr[i],arr[j]);
+break;
+}
+}
+
     return 0;
 }
