@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n,j,c=0,c1=0;
+    int mfreq=0;
+    int arr[20];
+     printf("Enter a number of elements: ");
+    scanf("%d", &n);
+
+//entering the  array elements
+
+   for(i=0;i<n;i++)
+{
+   printf("enter element arr[%d]",i);
+  scanf("%d",arr[i]);
+}
+
+//finding maximum frequency element
+
+    for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(arr[j]==arr[i])
+c++;
+}
+if(c>c1)
+mfreq=arr[i];
+c1=c;
+}
+printf("maximum frequency element is %d",mfreq);
+return 0;
+}
