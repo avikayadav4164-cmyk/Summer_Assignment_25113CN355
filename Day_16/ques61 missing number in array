@@ -1,1 +1,32 @@
+#include <stdio.h>
 
+int main()
+{
+    int i,n,sum=0,sum1=0;
+    int arr[20];
+    int mnum;
+     printf("Enter a number of elements: ");
+    scanf("%d", &n);
+
+//entering the  array elements
+
+   for(i=0;i<n;i++)
+{
+   printf("enter element arr[%d]",i);
+  scanf("%d",arr[i]);
+}
+
+// finding the missing element
+
+    for(i=0;i<n;i++)
+{
+sum=sum+arr[i];   //actual sum of given array
+}
+for(i=arr[0];i<arr[n];i++)
+{
+ sum1=sum1+i;  //sum if the number is not missing from the array
+}
+mnum=sum1-sum;
+printf("the missing number is %d",mnum);
+    return 0;
+}
