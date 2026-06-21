@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0,cv=0,cs=0,j;
+
+    printf("Enter a string in lowercase: ");
+    scanf("%s", str);
+
+    while(str[i] != '\0') {
+        i++;
+    }
+
+    for(j=0;j<i;j++)
+    {
+     if(str[j]=='a'||str[j]=='e'||str[j]=='i'||str[j]=='o'||str[j]=='u')
+     cv++;
+     else 
+     cs++;
+     }
+    printf("vowels %d",cv);
+    printf("consonants %d",cs);
+
+    return 0;
+}
