@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    char str[100], rev[100],flag=1;
+    int len = 0, i, j = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    // Find length
+    while (str[len] != '\0')
+        len++;
+
+    // Reverse the string
+    for (i = len - 1; i >= 0; i--) {
+        rev[j] = str[i];
+        j++;
+    }
+
+    // Compare strings
+    for (i = 0; i<len; i++) {
+        if (str[i] != rev[i]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag==1)
+        printf("Palindrome");
+    else
+        printf("Not a Palindrome String");
+
+    return 0;
+}
