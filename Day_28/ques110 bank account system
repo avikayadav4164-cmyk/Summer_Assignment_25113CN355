@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int accNo, choice;
+    char name[50];
+    float balance, amount;
+
+    printf("===== BANK ACCOUNT SYSTEM =====\n");
+
+    printf("Enter Account Number: ");
+    scanf("%d", &accNo);
+
+    printf("Enter Account Holder Name: ");
+    scanf("%s", name);
+
+    printf("Enter Initial Balance: ");
+    scanf("%f", &balance);
+
+    printf("\n1. Deposit");
+    printf("\n2. Withdraw");
+    printf("\nEnter Choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        printf("Enter Amount to Deposit: ");
+        scanf("%f", &amount);
+        balance += amount;
+    }
+    else if (choice == 2) {
+        printf("Enter Amount to Withdraw: ");
+        scanf("%f", &amount);
+
+        if (amount <= balance)
+            balance -= amount;
+        else
+            printf("Insufficient Balance!\n");
+    }
+
+    printf("\nCurrent Balance = Rs. %f", balance);
+
+    return 0;
+}
