@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main() {
+    int ans, score = 0;
+
+    printf("***** Welcome to the Quiz Game *****\n\n");
+
+    // Question 1
+    printf("Q1. Which planet is known as the Red Planet?\n");
+    printf("1. Earth\n2. Mars\n3. Jupiter\n4. Venus\n");
+    printf("Enter your answer: ");
+    scanf("%d", &ans);
+
+    if (ans == 2)
+        score++;
+
+    // Question 2
+    printf("\nQ2. Who is known as the Father of C Language?\n");
+    printf("1. Dennis Ritchie\n2. James Gosling\n3. Bjarne Stroustrup\n4. Guido van Rossum\n");
+    printf("Enter your answer: ");
+    scanf("%d", &ans);
+
+    if (ans == 1)
+        score++;
+
+    // Question 3
+    printf("\nQ3. What is the capital of Japan?\n");
+    printf("1. Seoul\n2. Beijing\n3. Tokyo\n4. Bangkok\n");
+    printf("Enter your answer: ");
+    scanf("%d", &ans);
+
+    if (ans == 3)
+        score++;
+
+    // Question 4
+    printf("\nQ4. Which number is a prime number?\n");
+    printf("1. 9\n2. 15\n3. 21\n4. 17\n");
+    printf("Enter your answer: ");
+    scanf("%d", &ans);
+
+    if (ans == 4)
+        score++;
+
+    // Question 5
+    printf("\nQ5. Which data structure follows FIFO?\n");
+    printf("1. Stack\n2. Queue\n3. Array\n4. Tree\n");
+    printf("Enter your answer: ");
+    scanf("%d", &ans);
+
+    if (ans == 2)
+        score++;
+
+    // Final Result
+    printf("\n===== QUIZ RESULT =====\n");
+    printf("Your Score: %d/5\n", score);
+
+    if (score == 5)
+        printf("Excellent! Perfect Score!\n");
+    else if (score >= 3)
+        printf("Good Job!\n");
+    else
+        printf("Keep Practicing!\n");
+
+    return 0;
+}
