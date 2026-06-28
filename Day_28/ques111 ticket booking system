@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int tickets;
+    float total, discount = 0;
+
+    printf("=====  TICKET BOOKING =====\n");
+
+    printf("Enter Your Name: ");
+    scanf("%s", name);
+
+    printf("Enter Number of Tickets: ");
+    scanf("%d", &tickets);
+    
+    printf("****price per ticket is 250rs****");
+    total = tickets * 250;
+
+    if (tickets >= 5)
+        discount = total * 0.10;
+
+    total = total - discount;
+
+    printf("\n----- BOOKING DETAILS -----\n");
+    printf("Customer : %s\n", name);
+    printf("Tickets : %d\n", tickets);
+    printf("Discount : Rs. %f\n", discount);
+    printf("Final Amount : Rs. %.2f\n", total);
+
+    return 0;
+}
