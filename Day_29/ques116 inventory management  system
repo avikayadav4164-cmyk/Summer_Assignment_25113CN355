@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char item[50];
+    int quantity;
+    float price, total;
+
+    printf("===== INVENTORY MANAGEMENT SYSTEM =====\n");
+
+    printf("Enter Item Name: ");
+    scanf("%s", item);
+
+    printf("Enter Quantity: ");
+    scanf("%d", &quantity);
+
+    printf("Enter Price per Item: ");
+    scanf("%f", &price);
+
+    total = quantity * price;
+
+    printf("\n----- INVENTORY DETAILS -----\n");
+    printf("Item Name : %s\n", item);
+    printf("Quantity  : %d\n", quantity);
+    printf("Price     : %.2f\n", price);
+    printf("Total Cost: %.2f\n", total);
+
+    return 0;
+}
